@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FreeFolio - Freelancer Portfolio Template</title>
+    <title>Web Personal saya</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
+    
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -112,7 +113,7 @@
                         <div class="position-relative mb-4">
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">D3 Manajemen Informatika</h5>
-                            <p class="mb-2"><strong>Universitas Syiah KuALA</strong> | <small>2023 - 2025</small></p>
+                            <p class="mb-2"><strong>Universitas Syiah Kuala</strong> | <small>2023 - 2025</small></p>
                             <p>D3 Manajemen Informatika menggabungkan keterampilan IT dan manajemen bisnis, mempersiapkan lulusan untuk bekerja di bidang teknologi dan manajemen.</p>
                         </div>
                     </div>
@@ -144,9 +145,75 @@
         </div>
     </div>
     <!-- Qualification End -->
-     
+
+
+    <!--BMKG gempa-->    
+    <div class="gempa-container">
+        <h1>Info Gempa Terkini BMKG</h1>
+        <p>Waktu: 29 Sep 2024 22:36:00 WIB</p>
+        <p>Magnitudo: 3.9</p>
+        <p>Kedalaman: 2 km</p>
+        <p>Koordinat: 0.21 LS, 119.82 BT</p>
+        <p>Lokasi: Pusat gempa berada di darat 23 km barat laut Donggala</p>
+        <p>Potensi: Gempa ini dirasakan untuk diteruskan pada masyarakat</p>
+        
+        <!-- Tombol untuk melihat gambar -->
+        <button onclick="showImage()">Lihat Gambar Gempa</button>
+        
+        <!-- Tempat gambar akan muncul -->
+        <img id="gempaImage" src="https://data.bmkg.go.id/DataMKG/TEWS/20240929223600.mmi.jpg" alt="Gambar Gempa Terkini" style="display:none;">
+    
+        <script>
+            function showImage() {
+                // Menampilkan gambar setelah tombol ditekan
+                document.getElementById('gempaImage').style.display = 'block';
+            }
+        </script>
+    </div>
+
+    <!--BMKG gempa End-->
+
+    <!--form-->
+    <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    <!--Endform-->
+
+    <!--script-->
+    <script>
+        // Event listener untuk menangkap data dan menyimpannya
+        document.querySelector('form').addEventListener('submit', function (event) {
+          event.preventDefault(); // Menghentikan pengiriman form secara default
+          
+          // Menangkap nilai input email dan password
+          const email = document.getElementById('exampleInputEmail1').value;
+          const password = document.getElementById('exampleInputPassword1').value;
+      
+          // Menyimpan data ke localStorage
+          localStorage.setItem('email', email);
+          localStorage.setItem('password', password);
+      
+          // Redirect atau buka halaman untuk menampilkan data yang dikirimkan
+          window.location.href = 'displayData.php'; // Buka halaman untuk menampilkan data
+        });
+      </script>
+    <!--Endscript-->
+
     <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+     <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
