@@ -112,6 +112,23 @@
         loop: true,
         items: 1
     });
+
+    // Event listener untuk menangkap data dan menyimpannya
+    document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Mencegah submit form secara default
+  
+    // Menangkap nilai input email dan password
+    const email = document.getElementById('exampleInputEmail1').value;
+    const password = document.getElementById('exampleInputPassword1').value;
+  
+    // Menyimpan data ke localStorage
+    localStorage.setItem('email', email);
+    localStorage.setItem('password', password);
+  
+    // Redirect ke halaman HTML lain
+    window.location.href = 'displayData.html';
+  });
+  
     
 })(jQuery);
 
